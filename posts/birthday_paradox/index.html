@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en-us">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Birthday Paradox ? | Khalid C. Weblog</title>
+
+
+<link rel="stylesheet" href="/css/style.css"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://KhalidCK.github.io"><h1 class="title is-4">Khalid C. Weblog</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile"><a class="level-item" aria-label="email" href='mailto:fr.ckhalid@gmail.com' target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="github" href='https://github.com/KhalidCK' target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    
+  </svg></i>
+            </span>
+          </a></nav>
+      </div>
+    </nav>
+
+    <nav class="nav">
+      
+
+      
+    </nav>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+    </div>
+    <h2 class="subtitle is-6">May 8, 2018</h2>
+    <h1 class="title">Birthday Paradox ?</h1>
+    
+    <div class="content">
+      <p>Lately I have stumbled on the birthday paradox. At first glace it does not seems more than some probability fantasy, however this problem is relevant as a proxy to a number of real world case : for example in security the <a href="https://en.wikipedia.org/wiki/Birthday_attack" target="_blank">birthday attack</a></p>
+
+<p></p>
+
+<h2 id="a-story">A story &hellip;</h2>
+
+<p>There are tons of solvers on internet that will provide the answer to this problem, however, here I&rsquo;m interested to solve and understand the general idea of it. I&rsquo;ll <strong>resonate</strong> through it using python.</p>
+
+<p>A concrete example is usually a good way to go, let&rsquo;s say that we&rsquo;re in a room of 23 peoples and I&rsquo;m betting with my friends to know how many people here are sharing the same birthday.</p>
+
+<p>To make it simpler I&rsquo;ll say that a year always have 365 days (I don&rsquo;t consider leap years).</p>
+
+<p>I&rsquo;ll build the example with python and <a href="https://github.com/stympy/faker" target="_blank">Faker</a> library.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> faker <span style="color:#f92672">import</span> Faker
+fake <span style="color:#f92672">=</span> Faker(<span style="color:#e6db74">&#39;fr_FR&#39;</span>)</code></pre></div>
+<p>I&rsquo;ll also load some useful library to simulate random choice and manipulate probabilistic concept</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> random
+<span style="color:#f92672">from</span> itertools <span style="color:#f92672">import</span> combinations</code></pre></div>
+<p>Here our <em>people</em> :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">peoples <span style="color:#f92672">=</span> [fake<span style="color:#f92672">.</span>name() <span style="color:#66d9ef">for</span> nb <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">23</span>)]</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">len(peoples)</code></pre></div>
+<pre><code>23
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">peoples[:<span style="color:#ae81ff">5</span>]</code></pre></div>
+<pre><code>['Marcel Maurice',
+ 'Lucas Dupuy',
+ 'Bertrand Le Roux-Guillot',
+ 'Agnès-Joséphine Antoine',
+ 'Gilles Delmas']
+</code></pre>
+
+<p>I&rsquo;m in the room, I look around and try to compare my birthday to the 22 other people.</p>
+
+<p>Knowing that there is <sup>1</sup>&frasl;<sub>365</sub> that I share my birthday date with, so there is something like 23 different possible combinations &hellip; <strong>hold on</strong></p>
+
+<p>We want to figure out how many people <strong>in the room</strong> are sharing their birthday not only <strong>me</strong>, outch I was a little self-centered here.</p>
+
+<p>We have to consider all the combination of people in the room.
+Let&rsquo;s model it with Python :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">combination <span style="color:#f92672">=</span> list(combinations(peoples,<span style="color:#ae81ff">2</span>))</code></pre></div>
+<p>A quick look at samples :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> peopleA,peopleB <span style="color:#f92672">in</span> random<span style="color:#f92672">.</span>sample(combination,<span style="color:#ae81ff">5</span>):
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;{peopleA} **compare with** with {peopleB}&#39;</span>)
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;----&#39;</span>)</code></pre></div>
+<pre><code>Gilles Delmas **compare with** with Auguste Caron
+----
+Audrey Henry **compare with** with Marcel Lemaitre
+----
+Charlotte Lejeune du Guillon **compare with** with Matthieu de la Poulain
+----
+Bertrand Le Roux-Guillot **compare with** with Bertrand Potier
+----
+Matthieu de la Poulain **compare with** with Roger-Raymond Lemoine
+----
+</code></pre>
+
+<p>and this list contains :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">len(combination)</code></pre></div>
+<pre><code>253
+</code></pre>
+
+<p>Fair enough <em>a little</em> more than 23.</p>
+
+<p>The question is :</p>
+
+<blockquote>
+<p>In this room of 23 people, what  the chance is that there are at least two persons that have the same birthday.</p>
+</blockquote>
+
+<p>This question is quite complex and hard to think about. However the opposite question is easier to understand</p>
+
+<blockquote>
+<p>What is the chance that everyone is different ?</p>
+</blockquote>
+
+<p>If we answer this question, we can answer the initial one (<em>1 - opposite question</em>)</p>
+
+<h3 id="work-out-the-probabilities">Work out the probabilities.</h3>
+
+<p>Loosely a probability can be defined as :</p>
+
+<pre><code>The number of possibilities that meet  a condition 
+
+divided by
+
+The number of equally likely possibilities
+</code></pre>
+
+<p>In our case the probability of two birthdays to <em>collide</em> is <sup>1</sup>&frasl;<sub>365</sub>.</p>
+
+<p>So we also know the probably to <strong>not</strong> collide.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">proba_not_collide <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">365</span> 
+round(proba_not_collide,<span style="color:#ae81ff">3</span>)</code></pre></div>
+<pre><code>0.997
+</code></pre>
+
+<p>As expected it is an unlikely event .</p>
+
+<p>Just to be sure let&rsquo;s continue our investigation &hellip;</p>
+
+<h3 id="instincts">Instincts</h3>
+
+<p>We have independent probability, so we can use the same old strategy that we were taught at school in this case.</p>
+
+<p>Meaning that we divide &hellip; or mutliply or &hellip; Ok I have to face it, I don&rsquo;t remember.</p>
+
+<p>I&rsquo;ll figure it out with some examples</p>
+
+<p><img src="/img/birthday/proba_tree_coin.png" alt="tree coin proba" /></p>
+
+<p>So it seems that rather than multiply or divide we&rsquo;re going for an exponent change !</p>
+
+<p>So our probability that there is no collision in birthday is :</p>
+
+<pre><code>(364/365)^23 
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">proba_not_collide<span style="color:#f92672">**</span><span style="color:#ae81ff">253</span></code></pre></div>
+<pre><code>0.4995228459634194
+</code></pre>
+
+<p>And therefore the response to our initial question</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">0.4995</span></code></pre></div>
+<pre><code>0.5005
+</code></pre>
+
+<p>The result is kind of counter-intuitive, you have <sup>1</sup>&frasl;<sub>2</sub> chance to have two person with the same birthday in a room of 23 people.</p>
+
+<p>There is probably two main reason for our initial misleading intuition :
+- You have to think about all of combination that are <strong>not</strong> you.
+- Thinking in exponent is usually not natural for human being, we are more used to linear like addition, multiplying &hellip;</p>
+
+<p>To go further :</p>
+
+<ul>
+<li><a href="https://betterexplained.com/articles/understanding-the-birthday-paradox/" target="_blank">Better explained</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Birthday_problem" target="_blank">Wikipedia</a>
+<br /></li>
+</ul>
+      
+      <div class="related">
+</div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/KhalidCK">Khalid C.</a> 2018</p>
+    
+  </div>
+</section>
+
+</body>
+</html>
+

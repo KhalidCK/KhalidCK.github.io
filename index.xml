@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Khalid C.</title>
+    <title>Khalid C. Weblog</title>
     <link>https://KhalidCK.github.io/</link>
-    <description>Recent content on Khalid C.</description>
+    <description>Recent content on Khalid C. Weblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Apr 2018 20:44:00 +0200</lastBuildDate>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/KhalidCK&#34;&gt;Khalid C.&lt;/a&gt; 2018</copyright>
+    <lastBuildDate>Tue, 08 May 2018 10:14:00 +0200</lastBuildDate>
     
 	<atom:link href="https://KhalidCK.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Parisian metro</title>
+      <title>Birthday Paradox ?</title>
+      <link>https://KhalidCK.github.io/posts/birthday_paradox/</link>
+      <pubDate>Tue, 08 May 2018 10:14:00 +0200</pubDate>
+      
+      <guid>https://KhalidCK.github.io/posts/birthday_paradox/</guid>
+      <description>&lt;p&gt;Lately I have stumbled on the birthday paradox. At first glace it does not seems more than some probability fantasy, however this problem is relevant as a proxy to a number of real world case : for example in security the &lt;a href=&#34;https://en.wikipedia.org/wiki/Birthday_attack&#34; target=&#34;_blank&#34;&gt;birthday attack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Parisian metro wisdom</title>
       <link>https://KhalidCK.github.io/posts/metro-paris/</link>
       <pubDate>Tue, 10 Apr 2018 20:44:00 +0200</pubDate>
       

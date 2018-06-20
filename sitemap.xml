@@ -3,29 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://KhalidCK.github.io/posts/birthday_paradox/</loc>
+    <loc>https://khalidck.github.io/posts/birthday_paradox/</loc>
     <lastmod>2018-05-08T10:14:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://KhalidCK.github.io/posts/metro-paris/</loc>
+    <loc>https://khalidck.github.io/posts/lbc-immo-lille/</loc>
     <lastmod>2018-04-10T20:44:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://KhalidCK.github.io/</loc>
+    <loc>https://khalidck.github.io/posts/metro/</loc>
+    <lastmod>2018-04-10T20:44:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://khalidck.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://khalidck.github.io/</loc>
     <lastmod>2018-05-08T10:14:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://KhalidCK.github.io/posts/</loc>
+    <loc>https://khalidck.github.io/posts/</loc>
     <lastmod>2018-05-08T10:14:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://KhalidCK.github.io/tags/</loc>
+    <loc>https://khalidck.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   

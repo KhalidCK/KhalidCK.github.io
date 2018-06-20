@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="blog personnel data engineer">
+	<meta name="author" content="Khalid CK">
+	<meta name="generator" content="Hugo 0.41" />
+	<title>Quand prendre le métro à Paris ? &middot; KhalidCK</title>
+	<!-- Stylesheets -->
+	
+	<link rel="stylesheet" href="https://khalidck.github.io/css/main.css"/>
+	
+	
+
+	
+
+	<!-- Custom Fonts -->
+	<link href="https://khalidck.github.io/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	
+	<link rel="shortcut icon" type="image/x-icon" href="https://khalidck.github.io/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="https://khalidck.github.io/favicon.ico">
+	
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="js/ie/html5shiv.js"></script>
+	<script src="js/ie/html5shiv.jsrespond.min.js"></script>
+	<![endif]-->
+</head>
+    <body>
+
+    <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+    <header id="header" class="alt">
+        <a href="https://khalidck.github.io/" class="logo"><strong>Khalid CK</strong> <span>Data Analyst, long-life learner</span></a>
+        <nav>
+            <a href="#menu"></a>
+        </nav>
+    </header>
+
+<!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
+            
+                <li><a href="https://khalidck.github.io/index.html">Home</a></li>
+            
+                <li><a href="https://www.github.com/KhalidCK">Github</a></li>
+            
+                <li><a href="https://www.linkedin.com/in/khalid-chakhmoun-83876033">LinkedIN</a></li>
+            
+
+        </ul>
+        <ul class="actions vertical">
+            
+            
+        </ul>
+    </nav>
+
+        <!-- Main -->
+            <div id="main" class="alt">
+
+                
+                    <section id="one">
+                        <div class="inner">
+                            <header class="major">
+                                <h1>Quand prendre le métro à Paris ?</h1>
+                            </header>
+                            
+                            
+
+<p>À Paris, le métro est une nécessité pour la majorité de ses habitants.
+Il est composé de 14 lignes principales qui s&rsquo;étendent sur près de 220
+km. En moyenne, entre deux stations il y a 500m. Il a beaucoup
+d&rsquo;avantages, mais un inconvénient de taille : il est <em>extrêmement</em>
+fréquenté.</p>
+
+<p>Si l&rsquo;on souhaite éviter la foule, il est communément admis <strong>d&rsquo;éviter</strong>
+les horaires suivants :</p>
+
+<ul>
+<li>Le matin entre 8 et 9h</li>
+<li>Le soir entre 17 et 19h</li>
+</ul>
+
+<p>Existe-t-il des données pour confirmer ce constat empirique ? Est-il
+vrai dans tous les jours de la semaine, toute l&rsquo;année et pour toutes les
+lignes de métro ?</p>
+
+<p><em>Pour les explorateurs:</em> <a href="https://app.powerbi.com/view?r=eyJrIjoiNDg0NWRhNTYtMGY1Zi00ZjA5LTlhYTctNDQyYjgyMmI3ZTEwIiwidCI6IjkwYzdhMjBhLWYzNGItNDBiZi1iYzQ4LWI5MjUzYjZmNWQyMCIsImMiOjh9">une visualisation PowerBI</a></p>
+
+<h2 id="obtenir-les-données"><strong>Obtenir les données</strong></h2>
+
+<p>Après quelque recherche sur le net,
+<a href="https://www.iledefrance-mobilites.fr/">iledefrance-mobilites</a>
+à récemment publiés des <em>datasets</em> qui pourrait nous aider dans notre
+problématique.</p>
+
+<p>Il y a deux types de dataset disponibles : l&rsquo;un décrit le nombre de
+voyageurs annuels, l&rsquo;autre le pourcentage pour chaque heure du nombre de
+billets/titres de transport validés.</p>
+
+<p>Après quelques manipulations et nettoyages des données, les
+détails sont disponibles sur mon
+<a href="https://github.com/KhalidCK/metro-paris/tree/master/notebooks">github</a>,
+on peut commencer l&rsquo;interrogation de ces dernières.</p>
+
+<p>À quoi ressemble la répartition du nombre de voyageurs chaque mois
+(janvier = 1 &hellip;)</p>
+
+<p><img src="/img/metro/monthly-traveler.png" alt="monthly traveler in millions" /></p>
+
+<p>On observe sans surprise une diminution en août ; Paris est connu pour
+être « vide » après le 15 août.</p>
+
+<p>Comment les voyageurs se répartissent-ils sur les différentes lignes ?</p>
+
+<p>Une visualisation pertinente est le <em>swarm plot.</em> Il permet de
+représenter toutes les données, plutôt que d&rsquo;utiliser des agrégations.</p>
+
+<p><img src="/img/metro/daily-passenger-distribution.png" alt="daily passenger distribution" /></p>
+
+<p>Chaque point représente le nombre de passagers pendant une journée en
+2017.</p>
+
+<p>Explorons maintenant le deuxième dataset.</p>
+
+<p>Les données sont divisées en 5 profils :</p>
+
+<blockquote>
+<p>● Dimanche, jours fériés et ponts</p>
+
+<p>● Jour ouvré en période de vacances scolaires</p>
+
+<p>● Jour ouvré hors période de vacances scolaires</p>
+
+<p>● Samedi en période de vacances scolaires</p>
+
+<p>● Samedi en période de vacances scolaires</p>
+</blockquote>
+
+<p>Le taux de validation par heure est défini comme :</p>
+
+<p>&ldquo;le nombre de validations pour une heure et une station spécifique
+divisé par le nombre total de validations dans la journée&rdquo;</p>
+
+<p>Pour chaque jour le pourcentage a donc pour total 100.</p>
+
+<p>Une vue d&rsquo;ensemble :</p>
+
+<p><img src="/img/metro/average-metro-user-per-hour.png" alt="average-metro-user-per-hour" /></p>
+
+<p>Pour chaque profil :</p>
+
+<p><img src="/img/metro/facet-grid-user-per-hour.png" alt="facet-profile" /></p>
+
+<h2 id="du-bon-sens"><strong>Du bon sens ?</strong></h2>
+
+<p>Il semble que la vision empirique se confirme en <strong>moyenne</strong>. Cependant,
+l&rsquo;exploration des données (cf <em><a href="https://app.powerbi.com/view?r=eyJrIjoiNDg0NWRhNTYtMGY1Zi00ZjA5LTlhYTctNDQyYjgyMmI3ZTEwIiwidCI6IjkwYzdhMjBhLWYzNGItNDBiZi1iYzQ4LWI5MjUzYjZmNWQyMCIsImMiOjh9">visualisation
+PowerBI</a>
+)</em> permet d&rsquo;observer que la tendance n&rsquo;est pas confirmée pour toutes les
+stations (exemples ?) et, que prendre le métro à des heures différentes
+pour celles-ci permet d&rsquo;éviter la foule</p>
+
+                        </div>
+                    </section>
+            <!-- Disqus Inject -->
+                
+            </div>
+            
+        <!-- Footer -->
+            
+                <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                
+                    <li><a href="https://www.github.com/KhalidCK" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                
+                    <li><a href="https://www.linkedin.com/in/khalid-chakhmoun-83876033" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                
+                    <li><a href="https://twitter.com/fr_KhalidC" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+                
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Khalid Chakhmoun</li>
+                
+            </ul>
+        </div>
+    </footer>
+
+            
+        </div>
+
+    <!-- Scripts -->
+        <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://khalidck.github.io/js/jquery.min.js"></script>
+    <script src="https://khalidck.github.io/js/jquery.scrolly.min.js"></script>
+    <script src="https://khalidck.github.io/js/jquery.scrollex.min.js"></script>
+    <script src="https://khalidck.github.io/js/skel.min.js"></script>
+    <script src="https://khalidck.github.io/js/util.js"></script>
+
+    
+
+    <!-- Main JS -->
+    <script src="https://khalidck.github.io/js/main.js"></script>
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-121079793-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    
+
+    </body>
+</html>

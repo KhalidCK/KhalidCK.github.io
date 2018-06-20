@@ -1,37 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Khalid C. Weblog</title>
-    <link>https://KhalidCK.github.io/posts/</link>
-    <description>Recent content in Posts on Khalid C. Weblog</description>
+    <title>Posts on KhalidCK</title>
+    <link>https://khalidck.github.io/posts/</link>
+    <description>Recent content in Posts on KhalidCK</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/KhalidCK&#34;&gt;Khalid C.&lt;/a&gt; 2018</copyright>
+    <language>fr</language>
     <lastBuildDate>Tue, 08 May 2018 10:14:00 +0200</lastBuildDate>
     
-	<atom:link href="https://KhalidCK.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://khalidck.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Birthday Paradox ?</title>
-      <link>https://KhalidCK.github.io/posts/birthday_paradox/</link>
+      <link>https://khalidck.github.io/posts/birthday_paradox/</link>
       <pubDate>Tue, 08 May 2018 10:14:00 +0200</pubDate>
       
-      <guid>https://KhalidCK.github.io/posts/birthday_paradox/</guid>
-      <description>&lt;p&gt;Lately I have stumbled on the birthday paradox. At first glace it does not seems more than some random probability dilemma, however this problem is relevant as a proxy to a number of real world case : for example in security the &lt;a href=&#34;https://en.wikipedia.org/wiki/Birthday_attack&#34; target=&#34;_blank&#34;&gt;birthday attack&lt;/a&gt;&lt;/p&gt;
+      <guid>https://khalidck.github.io/posts/birthday_paradox/</guid>
+      <description>&lt;p&gt;Lately I have stumbled on the birthday paradox. At first glace it does not seems more than some probability fantasy, however this problem is relevant as a proxy to a number of real world case : for example in security the &lt;a href=&#34;https://en.wikipedia.org/wiki/Birthday_attack&#34;&gt;birthday attack&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Parisian metro wisdom</title>
-      <link>https://KhalidCK.github.io/posts/metro-paris/</link>
+      <title>Leboncoin : location Lilloise</title>
+      <link>https://khalidck.github.io/posts/lbc-immo-lille/</link>
       <pubDate>Tue, 10 Apr 2018 20:44:00 +0200</pubDate>
       
-      <guid>https://KhalidCK.github.io/posts/metro-paris/</guid>
-      <description>In Paris the metro is a daily necessity for most of us.
-It has 14 major lines and has around 220 km of railroads. One original fact, compared to other European subway, is that stops are quite close : on average, the inter-distance between 2 stations is 550 m.
-Lately I had a discussion and we tried to figure out when you should take it to avoid rush hours.</description>
+      <guid>https://khalidck.github.io/posts/lbc-immo-lille/</guid>
+      <description>En matière de location d&amp;rsquo;appartements, le site Leboncoin (LBC) est une plateforme permettant de nombreux échanges entre les propriétaires et locataires potentiels. Il rassemble un nombre élevé d&amp;rsquo;annonces venant aussi bien de particuliers que de professionnels.
+LBC présente une interface classique qui permet d&amp;rsquo;entrer des critères et retourne une liste de biens à partir de ces derniers.
+Dans l&amp;rsquo;exemple ci-dessus, 400 résultats ont été trouvés pour les critères sélectionnés suivants :</description>
+    </item>
+    
+    <item>
+      <title>Quand prendre le métro à Paris ?</title>
+      <link>https://khalidck.github.io/posts/metro/</link>
+      <pubDate>Tue, 10 Apr 2018 20:44:00 +0200</pubDate>
+      
+      <guid>https://khalidck.github.io/posts/metro/</guid>
+      <description>À Paris, le métro est une nécessité pour la majorité de ses habitants. Il est composé de 14 lignes principales qui s&amp;rsquo;étendent sur près de 220 km. En moyenne, entre deux stations il y a 500m. Il a beaucoup d&amp;rsquo;avantages, mais un inconvénient de taille : il est extrêmement fréquenté.
+Si l&amp;rsquo;on souhaite éviter la foule, il est communément admis d&amp;rsquo;éviter les horaires suivants :
+ Le matin entre 8 et 9h Le soir entre 17 et 19h  Existe-t-il des données pour confirmer ce constat empirique ?</description>
     </item>
     
   </channel>

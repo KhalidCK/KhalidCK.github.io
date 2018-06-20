@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="blog personnel data engineer">
+	<meta name="author" content="Khalid CK">
+	<meta name="generator" content="Hugo 0.41" />
+	<title>Leboncoin : location Lilloise &middot; KhalidCK</title>
+	<!-- Stylesheets -->
+	
+	<link rel="stylesheet" href="https://khalidck.github.io/css/main.css"/>
+	
+	
+
+	
+
+	<!-- Custom Fonts -->
+	<link href="https://khalidck.github.io/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	
+	<link rel="shortcut icon" type="image/x-icon" href="https://khalidck.github.io/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="https://khalidck.github.io/favicon.ico">
+	
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="js/ie/html5shiv.js"></script>
+	<script src="js/ie/html5shiv.jsrespond.min.js"></script>
+	<![endif]-->
+</head>
+    <body>
+
+    <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+    <header id="header" class="alt">
+        <a href="https://khalidck.github.io/" class="logo"><strong>Khalid CK</strong> <span>Data Analyst, long-life learner</span></a>
+        <nav>
+            <a href="#menu"></a>
+        </nav>
+    </header>
+
+<!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
+            
+                <li><a href="https://khalidck.github.io/index.html">Home</a></li>
+            
+                <li><a href="https://www.github.com/KhalidCK">Github</a></li>
+            
+                <li><a href="https://www.linkedin.com/in/khalid-chakhmoun-83876033">LinkedIN</a></li>
+            
+
+        </ul>
+        <ul class="actions vertical">
+            
+            
+        </ul>
+    </nav>
+
+        <!-- Main -->
+            <div id="main" class="alt">
+
+                
+                    <section id="one">
+                        <div class="inner">
+                            <header class="major">
+                                <h1>Leboncoin : location Lilloise</h1>
+                            </header>
+                            
+                            
+
+<p>En matière de location d&rsquo;appartements, le site Leboncoin (LBC) est une
+plateforme permettant de nombreux échanges entre les propriétaires et
+locataires potentiels. Il rassemble un nombre élevé d&rsquo;annonces venant
+aussi bien de particuliers que de professionnels.</p>
+
+<p>LBC présente une interface classique qui permet d&rsquo;entrer des critères et
+retourne une liste de biens à partir de ces derniers.</p>
+
+<p>Dans l&rsquo;exemple ci-dessus, 400 résultats ont été trouvés pour les
+critères sélectionnés suivants :</p>
+
+<blockquote>
+<p>3 pièces à Lille</p>
+</blockquote>
+
+<p><img src="/img/homebot/lbc-liste.png" alt="listing-leboncoin" /></p>
+
+<p>Afin de naviguer plus facilement dans cette masse de résultats,on aura
+tendance à chercher le bouton permettant de visualiser les résultats sur
+une carte interactive&hellip;et continuer de le chercher un certain temps&hellip;</p>
+
+<h2 id="absence-de-carte">Absence de carte</h2>
+
+<p>LBC n&rsquo;offre pas la possibilité d&rsquo;afficher les résultats d&rsquo;une recherche
+sur une carte interactive.</p>
+
+<p>Il est possible d&rsquo;essayer de limiter le nombre d&rsquo;annonces retourné en
+utilisant des mots clés, par exemple le nom d&rsquo;un quartier.</p>
+
+<p>Il faut alors cliquer sur chacun des liens pour obtenir la localisation
+du bien (latitude,longitude).</p>
+
+<p>La lecture des annonces proposées sur LBC montre que les propriétaires
+sont assez frileux à révéler l&rsquo;emplacement précis de leur bien et ne
+partagent souvent qu&rsquo;un nom de rue dans la description de l&rsquo;annonce,
+dans ces cas il n&rsquo;existe pas de localisation géographique associée.</p>
+
+<p><img src="/img/homebot/lbc-carte-generique.png" alt="pas-de-localisation" /></p>
+
+<p>Il est alors intéressant de s&rsquo;interroger sur le moyen d&rsquo;automatiser
+l&rsquo;extraction de ces données. afin de cibler beaucoup plus rapidement les
+annonces susceptibles d&rsquo;intéresser un utilisateur ?</p>
+
+<h2 id="apprendre-à-lire-à-la-machine">Apprendre à lire à la machine</h2>
+
+<p>Extraire une adresse pour une machine n&rsquo;est pas, techniquement, quelque
+chose d&rsquo;évident. Il n&rsquo;y a pas de modèle fixe qui décrit la structure
+d&rsquo;une voie de façon précise.A cela s&rsquo;ajoute le fait que ces adresse soient saisi
+manuellement par une personne : un être humain n&rsquo;a pas la régularité d&rsquo;une machine.</p>
+
+<p>Le Deep Learning permet d&rsquo;appréhender les cas de données non structurés
+de façon pertinente.</p>
+
+<p>La problématique que l&rsquo;on souhaite traiter se nomme <a href="https://en.wikipedia.org/wiki/Named_entity_recognition"><strong>N</strong>amed
+<strong>E</strong>ntity
+<strong>R</strong>ecognition</a>
+(NER)</p>
+
+<p>On montre à notre algorithme un certain nombre d&rsquo;exemples qui lui permet
+d&rsquo;<strong>apprendre</strong> à reconnaître les critères que l&rsquo;on souhaite extraire,
+par exemple une adresse. On combine également à ce résultat quelques
+heuristiques. La machine est ensuite capable d&rsquo;identifier plusieurs
+aspects d&rsquo;une annonce :</p>
+
+<blockquote>
+<div class="entities" style="line-height: 2.5"></br>Loue bel appartement dans résidence 
+<mark class="entity" style="background: #ddd; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
+    rue Catel Beghin
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">ADDR</span>
+</mark>
+ (ADDRESSE) au 
+<mark class="entity" style="background: #ddd; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
+    4ème étage
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">ETAGE</span>
+</mark>
+ (ETAGE) avec un grand balcon et une place de parking</br>Entrée avec rangements, séjour avec parquet, balcon, cuisine entièrement équipée (avec lave-vaisselle et four notamment), salle de bains, wc, 2 chambres.</br>Charges mensuelles 80€ Loyer mensuel : 900€ hors charges</br>Disponible à partir du 
+<mark class="entity" style="background: #bfe1d9; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
+    1er Août 2018
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">DATE</span>
+</mark>
+ (DATE DISPONIBILITE) .</br>Rafraichissement de l'appartement sera effectué en 
+<mark class="entity" style="background: #ddd; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
+    Juillet
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">MOIS</span>
+</mark>
+ (MOIS) avant l'entrée des nouveaux
+</div>
+</blockquote>
+
+<h2 id="carte-interactive">Carte interactive</h2>
+
+<p>Le résulat est disponible <a href="http://emknext.surge.sh/">ici</a></p>
+
+<p><a href="http://emknext.surge.sh">
+<img src="/img/homebot/demo.gif" alt="Homebot">
+</a></p>
+
+                        </div>
+                    </section>
+            <!-- Disqus Inject -->
+                
+            </div>
+            
+        <!-- Footer -->
+            
+                <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                
+                    <li><a href="https://www.github.com/KhalidCK" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                
+                    <li><a href="https://www.linkedin.com/in/khalid-chakhmoun-83876033" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                
+                    <li><a href="https://twitter.com/fr_KhalidC" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+                
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Khalid Chakhmoun</li>
+                
+            </ul>
+        </div>
+    </footer>
+
+            
+        </div>
+
+    <!-- Scripts -->
+        <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://khalidck.github.io/js/jquery.min.js"></script>
+    <script src="https://khalidck.github.io/js/jquery.scrolly.min.js"></script>
+    <script src="https://khalidck.github.io/js/jquery.scrollex.min.js"></script>
+    <script src="https://khalidck.github.io/js/skel.min.js"></script>
+    <script src="https://khalidck.github.io/js/util.js"></script>
+
+    
+
+    <!-- Main JS -->
+    <script src="https://khalidck.github.io/js/main.js"></script>
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-121079793-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    
+
+    </body>
+</html>

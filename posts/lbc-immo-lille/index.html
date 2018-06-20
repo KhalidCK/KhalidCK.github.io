@@ -80,28 +80,26 @@ plateforme permettant de nombreux échanges entre les propriétaires et
 locataires potentiels. Il rassemble un nombre élevé d&rsquo;annonces venant
 aussi bien de particuliers que de professionnels.</p>
 
-<p>LBC présente une interface classique qui permet d&rsquo;entrer des critères et
-retourne une liste de biens à partir de ces derniers.</p>
+<p>LBC présente une interface classique qui permet de filtrer les biens en fonction de différents critères.</p>
 
-<p>Dans l&rsquo;exemple ci-dessus, 400 résultats ont été trouvés pour les
-critères sélectionnés suivants :</p>
+<p>Dans l&rsquo;exemple ci-dessous, 400 résultats ont été trouvés pour la recherche suivante :</p>
 
 <blockquote>
-<p>3 pièces à Lille</p>
+<p>3 pièces à Lille, minimum 60 m2</p>
 </blockquote>
 
 <p><img src="/img/homebot/lbc-liste.png" alt="listing-leboncoin" /></p>
 
-<p>Afin de naviguer plus facilement dans cette masse de résultats,on aura
+<p>Afin de naviguer plus facilement dans cette masse de résultats, on aura
 tendance à chercher le bouton permettant de visualiser les résultats sur
-une carte interactive&hellip;et continuer de le chercher un certain temps&hellip;</p>
+une carte interactive&hellip; et continuer de le chercher un certain temps&hellip;</p>
 
 <h2 id="absence-de-carte">Absence de carte</h2>
 
 <p>LBC n&rsquo;offre pas la possibilité d&rsquo;afficher les résultats d&rsquo;une recherche
 sur une carte interactive.</p>
 
-<p>Il est possible d&rsquo;essayer de limiter le nombre d&rsquo;annonces retourné en
+<p>Il est possible d&rsquo;essayer de limiter le nombre d&rsquo;annonces en
 utilisant des mots clés, par exemple le nom d&rsquo;un quartier.</p>
 
 <p>Il faut alors cliquer sur chacun des liens pour obtenir la localisation
@@ -109,24 +107,21 @@ du bien (latitude,longitude).</p>
 
 <p>La lecture des annonces proposées sur LBC montre que les propriétaires
 sont assez frileux à révéler l&rsquo;emplacement précis de leur bien et ne
-partagent souvent qu&rsquo;un nom de rue dans la description de l&rsquo;annonce,
-dans ces cas il n&rsquo;existe pas de localisation géographique associée.</p>
+partagent souvent qu&rsquo;un nom de rue dans la description.
+Dans ces cas, il n&rsquo;existe pas de localisation géographique associée.</p>
 
 <p><img src="/img/homebot/lbc-carte-generique.png" alt="pas-de-localisation" /></p>
 
 <p>Il est alors intéressant de s&rsquo;interroger sur le moyen d&rsquo;automatiser
-l&rsquo;extraction de ces données. afin de cibler beaucoup plus rapidement les
-annonces susceptibles d&rsquo;intéresser un utilisateur ?</p>
+l&rsquo;extraction de ces données afin de cibler plus rapidement les
+annonces susceptibles d&rsquo;intéresser un utilisateur.</p>
 
-<h2 id="apprendre-à-lire-à-la-machine">Apprendre à lire à la machine</h2>
+<h2 id="apprendre-à-lire-à-un-ordinateur">Apprendre à lire à un ordinateur</h2>
 
 <p>Extraire une adresse pour une machine n&rsquo;est pas, techniquement, quelque
-chose d&rsquo;évident. Il n&rsquo;y a pas de modèle fixe qui décrit la structure
-d&rsquo;une voie de façon précise.A cela s&rsquo;ajoute le fait que ces adresse soient saisi
-manuellement par une personne : un être humain n&rsquo;a pas la régularité d&rsquo;une machine.</p>
+chose d&rsquo;évident.</p>
 
-<p>Le Deep Learning permet d&rsquo;appréhender les cas de données non structurés
-de façon pertinente.</p>
+<p>Pour résoudre ce problème le Deep Learning est la solution adéquate.</p>
 
 <p>La problématique que l&rsquo;on souhaite traiter se nomme <a href="https://en.wikipedia.org/wiki/Named_entity_recognition"><strong>N</strong>amed
 <strong>E</strong>ntity

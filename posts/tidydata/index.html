@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="blog personnel data engineer">
+	<meta name="author" content="Khalid CK">
+	<meta name="generator" content="Hugo 0.62.2" />
+	<title>Données en ordre &middot; KhalidCK</title>
+	<!-- Stylesheets -->
+	
+	<link rel="stylesheet" href="https://khalidck.github.io/css/main.css"/>
+	
+	
+
+	
+
+	<!-- Custom Fonts -->
+	<link href="https://khalidck.github.io/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	
+	<link rel="shortcut icon" type="image/x-icon" href="https://khalidck.github.io/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="https://khalidck.github.io/favicon.ico">
+	
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="js/ie/html5shiv.js"></script>
+	<script src="js/ie/html5shiv.jsrespond.min.js"></script>
+	<![endif]-->
+</head>
+    <body>
+
+    <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+    <header id="header" class="alt">
+        <a href="https://khalidck.github.io/" class="logo"><strong>Khalid CK</strong> <span>Data Analyst, long-life learner</span></a>
+        <nav>
+            <a href="#menu"></a>
+        </nav>
+    </header>
+
+<!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
+            
+                <li><a href="https://khalidck.github.io/index.html">Home</a></li>
+            
+                <li><a href="https://www.github.com/KhalidCK">Github</a></li>
+            
+                <li><a href="https://www.linkedin.com/in/khalid-chakhmoun-83876033">LinkedIN</a></li>
+            
+
+        </ul>
+        <ul class="actions vertical">
+            
+            
+        </ul>
+    </nav>
+
+        <!-- Main -->
+            <div id="main" class="alt">
+
+                
+                    <section id="one">
+                        <div class="inner">
+                            <header class="major">
+                                <h1>Données en ordre</h1>
+                            </header>
+                            
+                            <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Que partagent un bon cuisinier et un bon &ldquo;data analyst&rdquo; ? La préparation avant la recette.</p>
+<p>Pour un chef, la clarté vient de l'organisation de son espace. Les quelques ustensiles nécessaires sont à portée de main et les ingrédients sont positionnés stratégiquement.</p>
+<p>C'est un concept que l'on retrouve en analyse de donnée sous le nom de &ldquo;tidy data&rdquo;, un terme popularisé par Hadley Wickham, dans un article du <em>journal of statistical software</em>.</p>
+<p>L'essence des propositions de Hadley tourne autour de 3 axes:</p>
+<ol>
+<li>Une ligne est une observation</li>
+</ol>
+<p><img src="/img/tidydata/tidy-observation.png" alt="Excel rendering"></p>
+<ol start="2">
+<li>Chaque colonne est une variable</li>
+</ol>
+<p><img src="/img/tidydata/tidy-variable.png" alt="Excel rendering"></p>
+<ol start="3">
+<li>Une cellule contient une valeur unique</li>
+</ol>
+<p><img src="/img/tidydata/tidy-valeur.png" alt="Excel rendering"></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="etude-de-cas">Etude de cas</h2>
+<p>La question qui va nous guider pour cet exemple:</p>
+<p><strong>&ldquo;Quel est l'âge approximatif des habitants de Lille, Strasbourg et Paris en 2018&rdquo; ?</strong></p>
+<p>L'insee offre de nombreux jeux de données démographiques</p>
+<blockquote>
+<p>Chaque année, l'Insee estime la population des régions et des départements (France métropolitaine et DOM) à la date du 1ᵉʳ janvier. Ces estimations annuelles de population sont déclinées par sexe et par âge (quinquennal, classes d'âge).</p>
+</blockquote>
+<p>note: c'est souvent une bonne idée de parcourir la <a href="https://www.insee.fr/fr/statistiques/1893198#documentation">documentation</a> de la donnée</p>
+<p>Le dataset est un fichier excel :</p>
+<p><img src="/img/tidydata/raw-excel-population0.png" alt="Excel rendering"></p>
+<p>Je vous passe les détails de la transformation en csv qui nous amène à ce résultat.</p>
+<table>
+<thead>
+<tr>
+<th>departements</th>
+<th>0 à 19 ans</th>
+<th>20 à 39 ans</th>
+<th>40 à 59 ans</th>
+<th>60 à 74 ans</th>
+<th>75 ans et plus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>167720.0</td>
+<td>150949.0</td>
+<td>179476.0</td>
+<td>102788.0</td>
+<td>52755.0</td>
+</tr>
+<tr>
+<td>02</td>
+<td>131435.0</td>
+<td>115046.0</td>
+<td>137405.0</td>
+<td>96000.0</td>
+<td>48130.0</td>
+</tr>
+<tr>
+<td>03</td>
+<td>67628.0</td>
+<td>61986.0</td>
+<td>87232.0</td>
+<td>71910.0</td>
+<td>44309.0</td>
+</tr>
+<tr>
+<td>04</td>
+<td>33883.0</td>
+<td>30028.0</td>
+<td>43039.0</td>
+<td>34523.0</td>
+<td>20507.0</td>
+</tr>
+<tr>
+<td>05</td>
+<td>30518.0</td>
+<td>28633.0</td>
+<td>37887.0</td>
+<td>28356.0</td>
+<td>16390.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Chaque colonne est une variable</strong></p>
+<p>Les variables sont :</p>
+<ul>
+<li>Le département</li>
+<li>L'age</li>
+<li>Le nombre de personne</li>
+</ul>
+<p>On s'attends à trouver 3 colonnes, mais on en a ici beaucoup plus.</p>
+<p>Les colonnes <code>0 à 19 ans</code>, <code>20 à 39 ans</code>, &hellip; sont en réalité les <strong>valeurs</strong> de la variable <code>age</code>.</p>
+<p>Comment passer la donnée en <em>tidy</em> ?</p>
+<p>0n transforme les colonnes en lignes (les outils emploient souvent les termes de <code>melt</code> ou <code>stack</code>)</p>
+<table>
+<thead>
+<tr>
+<th>departements</th>
+<th>tranche</th>
+<th>nb</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>82</td>
+<td>0 à 19 ans</td>
+<td>63113</td>
+</tr>
+<tr>
+<td>08</td>
+<td>60 à 74 ans</td>
+<td>51268</td>
+</tr>
+<tr>
+<td>51</td>
+<td>75 ans et plus</td>
+<td>49020</td>
+</tr>
+<tr>
+<td>03</td>
+<td>60 à 74 ans</td>
+<td>71910</td>
+</tr>
+<tr>
+<td>04</td>
+<td>40 à 59 ans</td>
+<td>43039</td>
+</tr>
+<tr>
+<td>81</td>
+<td>0 à 19 ans</td>
+<td>85209</td>
+</tr>
+<tr>
+<td>80</td>
+<td>75 ans et plus</td>
+<td>50518</td>
+</tr>
+<tr>
+<td>03</td>
+<td>0 à 19 ans</td>
+<td>67628</td>
+</tr>
+<tr>
+<td>93</td>
+<td>40 à 59 ans</td>
+<td>423665</td>
+</tr>
+<tr>
+<td>03</td>
+<td>75 ans et plus</td>
+<td>44309</td>
+</tr>
+</tbody>
+</table>
+<p>Cette disposition permet de répondre à notre question sans se battre avec son outil.</p>
+<p><strong>&ldquo;Quelle est l'age approximatif des habitants de Lille, Strasbourg et Paris en 2018&rdquo;</strong></p>
+<p>En python cela donne :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">Behind the scene :</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">1.`france` est de type Pandas dataframe</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">1. on normalise en pourcentage les valeurs pour comparer les départements</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">   pourcentage = (nb tranche d</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">age pour un departement) / (nombre total de personne dans un departement)</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+france[france<span style="color:#f92672">.</span>departements<span style="color:#f92672">.</span>isin([<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">59</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">75</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">67</span><span style="color:#e6db74">&#39;</span>])]
+ax <span style="color:#f92672">=</span> sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">departements</span><span style="color:#e6db74">&#34;</span>,
+                 y<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">pourcentage</span><span style="color:#e6db74">&#34;</span>,
+                 hue<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">tranche</span><span style="color:#e6db74">&#34;</span>, data<span style="color:#f92672">=</span>france)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="/img/tidydata/population-age-75_59_67.png" alt="Age de la population 2018"></p>
+<h2 id="so-what-">So what ?</h2>
+<p>Moins de temps passé à discuter avec son outil == plus de temps pour la réflexion et l'interprétation des résultats.</p>
+<p>J'ai l'habitude de faire mes analyses avec la <a href="https://pydata.org/">pydata stack</a> mais un <em>excel ninja</em> devrait pouvoir appliquer les transformations utilisées ici sans trop de problèmes et en tirer les mêmes bénéfices.</p>
+<p>Pour aller plus loin, l'article de  <a href="http://vita.had.co.nz/papers/tidy-data.pdf">Hadley Wickham</a> donne plusieurs solutions pratiques pour convertir un dataset <em>dirty</em> en <em>tidy</em>.</p>
+
+                        </div>
+                    </section>
+            <!-- Disqus Inject -->
+                
+            </div>
+            
+        <!-- Footer -->
+            
+                <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                
+                    <li><a href="https://www.github.com/KhalidCK" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                
+                    <li><a href="https://www.linkedin.com/in/khalid-chakhmoun-83876033" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                
+                    <li><a href="https://twitter.com/fr_KhalidC" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+                
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Khalid Chakhmoun</li>
+                
+            </ul>
+        </div>
+    </footer>
+
+            
+        </div>
+
+    <!-- Scripts -->
+        <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://khalidck.github.io/js/jquery.min.js"></script>
+    <script src="https://khalidck.github.io/js/jquery.scrolly.min.js"></script>
+    <script src="https://khalidck.github.io/js/jquery.scrollex.min.js"></script>
+    <script src="https://khalidck.github.io/js/skel.min.js"></script>
+    <script src="https://khalidck.github.io/js/util.js"></script>
+
+    
+
+    <!-- Main JS -->
+    <script src="https://khalidck.github.io/js/main.js"></script>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-121079793-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+
+    </body>
+</html>

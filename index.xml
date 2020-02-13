@@ -17,9 +17,10 @@
       <pubDate>Sun, 26 Jan 2020 17:03:36 +0100</pubDate>
       
       <guid>https://khalidck.github.io/posts/tidydata/</guid>
-      <description>Que partagent un bon cuisinier et un bon &amp;ldquo;data analyst&amp;rdquo; ? La préparation avant la recette.
-Pour un chef, la clarté vient de l&#39;organisation de son espace. Les quelques ustensiles nécessaires sont à portée de main et les ingrédients sont positionnés stratégiquement.
-C&#39;est un concept que l&#39;on retrouve en analyse de donnée sous le nom de &amp;ldquo;tidy data&amp;rdquo;, un terme popularisé par Hadley Wickham, dans un article du journal of statistical software.</description>
+      <description>Notebook interactif: 
+Que partagent un bon cuisinier et un bon &amp;ldquo;data analyst&amp;rdquo; ? La préparation avant la recette.
+Pour un chef, la clarté vient de l&amp;rsquo;organisation de son espace. Les quelques ustensiles nécessaires sont à portée de main et les ingrédients sont positionnés stratégiquement.
+C&amp;rsquo;est un concept que l&amp;rsquo;on retrouve en analyse de donnée sous le nom de &amp;ldquo;tidy data&amp;rdquo;, un terme popularisé par Hadley Wickham, dans un article du journal of statistical software.</description>
     </item>
     
     <item>
@@ -28,8 +29,8 @@ C&#39;est un concept que l&#39;on retrouve en analyse de donnée sous le nom de 
       <pubDate>Tue, 10 Apr 2018 20:44:00 +0200</pubDate>
       
       <guid>https://khalidck.github.io/posts/metro/</guid>
-      <description>À Paris, le métro est une nécessité pour la majorité de ses habitants. Il est composé de 14 lignes principales qui s&#39;étendent sur près de 220 km. En moyenne, entre deux stations il y a 500m. Il a beaucoup d&#39;avantages, mais un inconvénient de taille : il est extrêmement fréquenté.
-Si l&#39;on souhaite éviter la foule, il est communément admis d&#39;éviter les horaires suivants :
+      <description>À Paris, le métro est une nécessité pour la majorité de ses habitants. Il est composé de 14 lignes principales qui s&#39;étendent sur près de 220 km. En moyenne, entre deux stations il y a 500m. Il a beaucoup d&amp;rsquo;avantages, mais un inconvénient de taille : il est extrêmement fréquenté.
+Si l&amp;rsquo;on souhaite éviter la foule, il est communément admis d&#39;éviter les horaires suivants :
  Le matin entre 8 et 9h Le soir entre 17 et 19h  Existe-t-il des données pour confirmer ce constat empirique ?</description>
     </item>
     

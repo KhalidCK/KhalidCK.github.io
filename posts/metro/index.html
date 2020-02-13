@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="description" content="blog personnel data engineer">
 	<meta name="author" content="Khalid CK">
-	<meta name="generator" content="Hugo 0.62.2" />
+	<meta name="generator" content="Hugo 0.64.0" />
 	<title>Quand prendre le métro à Paris ? &middot; KhalidCK</title>
 	<!-- Stylesheets -->
 	
@@ -76,16 +76,16 @@
                             <p>À Paris, le métro est une nécessité pour la majorité de ses habitants.
 Il est composé de 14 lignes principales qui s'étendent sur près de 220
 km. En moyenne, entre deux stations il y a 500m. Il a beaucoup
-d'avantages, mais un inconvénient de taille : il est <em>extrêmement</em>
+d&rsquo;avantages, mais un inconvénient de taille : il est <em>extrêmement</em>
 fréquenté.</p>
-<p>Si l'on souhaite éviter la foule, il est communément admis <strong>d'éviter</strong>
+<p>Si l&rsquo;on souhaite éviter la foule, il est communément admis <strong>d'éviter</strong>
 les horaires suivants :</p>
 <ul>
 <li>Le matin entre 8 et 9h</li>
 <li>Le soir entre 17 et 19h</li>
 </ul>
 <p>Existe-t-il des données pour confirmer ce constat empirique ? Est-il
-vrai dans tous les jours de la semaine, toute l'année et pour toutes les
+vrai dans tous les jours de la semaine, toute l&rsquo;année et pour toutes les
 lignes de métro ?</p>
 <p><em>Pour les explorateurs:</em> <a href="https://app.powerbi.com/view?r=eyJrIjoiNDg0NWRhNTYtMGY1Zi00ZjA5LTlhYTctNDQyYjgyMmI3ZTEwIiwidCI6IjkwYzdhMjBhLWYzNGItNDBiZi1iYzQ4LWI5MjUzYjZmNWQyMCIsImMiOjh9">une visualisation PowerBI</a></p>
 <h2 id="obtenir-les-données"><strong>Obtenir les données</strong></h2>
@@ -93,13 +93,13 @@ lignes de métro ?</p>
 <a href="https://www.iledefrance-mobilites.fr/">iledefrance-mobilites</a>
 à récemment publiés des <em>datasets</em> qui pourrait nous aider dans notre
 problématique.</p>
-<p>Il y a deux types de dataset disponibles : l'un décrit le nombre de
-voyageurs annuels, l'autre le pourcentage pour chaque heure du nombre de
+<p>Il y a deux types de dataset disponibles : l&rsquo;un décrit le nombre de
+voyageurs annuels, l&rsquo;autre le pourcentage pour chaque heure du nombre de
 billets/titres de transport validés.</p>
 <p>Après quelques manipulations et nettoyages des données, les
 détails sont disponibles sur mon
 <a href="https://github.com/KhalidCK/metro-paris/tree/master/notebooks">github</a>,
-on peut commencer l'interrogation de ces dernières.</p>
+on peut commencer l&rsquo;interrogation de ces dernières.</p>
 <p>À quoi ressemble la répartition du nombre de voyageurs chaque mois
 (janvier = 1 &hellip;)</p>
 <p><img src="/img/metro/monthly-traveler.png" alt="monthly traveler in millions"></p>
@@ -107,7 +107,7 @@ on peut commencer l'interrogation de ces dernières.</p>
 être « vide » après le 15 août.</p>
 <p>Comment les voyageurs se répartissent-ils sur les différentes lignes ?</p>
 <p>Une visualisation pertinente est le <em>swarm plot.</em> Il permet de
-représenter toutes les données, plutôt que d'utiliser des agrégations.</p>
+représenter toutes les données, plutôt que d&rsquo;utiliser des agrégations.</p>
 <p><img src="/img/metro/daily-passenger-distribution.png" alt="daily passenger distribution"></p>
 <p>Chaque point représente le nombre de passagers pendant une journée en 2017.</p>
 <p>Explorons maintenant le deuxième dataset.</p>
@@ -124,15 +124,15 @@ représenter toutes les données, plutôt que d'utiliser des agrégations.</p>
 <p>Le nombre de validations pour une heure et une station spécifique
 divisé par le nombre total de validations dans la journée</p>
 </blockquote>
-<p>Une vue d'ensemble :</p>
+<p>Une vue d&rsquo;ensemble :</p>
 <p><img src="/img/metro/average-metro-user-per-hour.png" alt="average-metro-user-per-hour"></p>
 <p>Pour chaque profil :</p>
 <p><img src="/img/metro/facet-grid-user-per-hour.png" alt="facet-profile"></p>
 <h2 id="du-bon-sens-"><strong>Du bon sens ?</strong></h2>
 <p>Il semble que la vision empirique se confirme en <strong>moyenne</strong>. Cependant,
-l'exploration des données (cf <em><a href="https://app.powerbi.com/view?r=eyJrIjoiNDg0NWRhNTYtMGY1Zi00ZjA5LTlhYTctNDQyYjgyMmI3ZTEwIiwidCI6IjkwYzdhMjBhLWYzNGItNDBiZi1iYzQ4LWI5MjUzYjZmNWQyMCIsImMiOjh9">visualisation
+l&rsquo;exploration des données (cf <em><a href="https://app.powerbi.com/view?r=eyJrIjoiNDg0NWRhNTYtMGY1Zi00ZjA5LTlhYTctNDQyYjgyMmI3ZTEwIiwidCI6IjkwYzdhMjBhLWYzNGItNDBiZi1iYzQ4LWI5MjUzYjZmNWQyMCIsImMiOjh9">visualisation
 PowerBI</a>
-)</em> permet d'observer que la tendance n'est pas confirmée pour toutes les
+)</em> permet d&rsquo;observer que la tendance n&rsquo;est pas confirmée pour toutes les
 stations (exemples ?) et, que prendre le métro à des heures différentes
 pour celles-ci permet d'éviter la foule</p>
 

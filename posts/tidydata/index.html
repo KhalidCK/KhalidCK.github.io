@@ -7,22 +7,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="description" content="blog personnel data engineer">
 	<meta name="author" content="Khalid CK">
-	<meta name="generator" content="Hugo 0.64.0" />
+	<meta name="generator" content="Hugo 0.65.3" />
 	<title>Données en ordre &middot; KhalidCK</title>
 	<!-- Stylesheets -->
 	
-	<link rel="stylesheet" href="https://khalidck.github.io/css/main.css"/>
+	<link rel="stylesheet" href="https://khalidck.fr/css/main.css"/>
 	
 	
 
 	
 
 	<!-- Custom Fonts -->
-	<link href="https://khalidck.github.io/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://khalidck.fr/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 	
-	<link rel="shortcut icon" type="image/x-icon" href="https://khalidck.github.io/favicon.ico">
-	<link rel="icon" type="image/x-icon" href="https://khalidck.github.io/favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="https://khalidck.fr/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="https://khalidck.fr/favicon.ico">
 	
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -39,7 +39,7 @@
 
             <!-- Header -->
     <header id="header" class="alt">
-        <a href="https://khalidck.github.io/" class="logo"><strong>Khalid CK</strong> <span>Data Analyst, long-life learner</span></a>
+        <a href="https://khalidck.fr" class="logo"><strong>Khalid CK</strong> <span>Data Analyst, long-life learner</span></a>
         <nav>
             <a href="#menu"></a>
         </nav>
@@ -49,7 +49,7 @@
     <nav id="menu">
         <ul class="links">
             
-                <li><a href="https://khalidck.github.io/index.html">Home</a></li>
+                <li><a href="https://khalidck.fr/index.html">Home</a></li>
             
                 <li><a href="https://www.github.com/KhalidCK">Github</a></li>
             
@@ -236,16 +236,16 @@
 <p>Cette disposition permet de répondre à notre question sans se battre avec son outil.</p>
 <p><strong>&ldquo;Quelle est l&rsquo;age approximatif des habitants de Lille, Strasbourg et Paris en 2018&rdquo;</strong></p>
 <p>En python cela donne :</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Behind the scene :</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">1.`france` est de type Pandas dataframe</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">1. on normalise en pourcentage les valeurs pour comparer les départements</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">   pourcentage = (nb tranche d</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">age pour un departement) / (nombre total de personne dans un departement)</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;</span>
-france[france<span style="color:#f92672">.</span>departements<span style="color:#f92672">.</span>isin([<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">59</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">75</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">67</span><span style="color:#e6db74">&#39;</span>])]
-ax <span style="color:#f92672">=</span> sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">departements</span><span style="color:#e6db74">&#34;</span>,
-                 y<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">pourcentage</span><span style="color:#e6db74">&#34;</span>,
-                 hue<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">tranche</span><span style="color:#e6db74">&#34;</span>, data<span style="color:#f92672">=</span>france)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">Behind the scene :
+</span><span style="color:#e6db74">1.`france` est de type Pandas dataframe
+</span><span style="color:#e6db74">1. on normalise en pourcentage les valeurs pour comparer les départements
+</span><span style="color:#e6db74">   pourcentage = (nb tranche d&#39;age pour un departement) / (nombre total de personne dans un departement)
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+france[france<span style="color:#f92672">.</span>departements<span style="color:#f92672">.</span>isin([<span style="color:#e6db74">&#39;59&#39;</span>, <span style="color:#e6db74">&#39;75&#39;</span>, <span style="color:#e6db74">&#39;67&#39;</span>])]
+ax <span style="color:#f92672">=</span> sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;departements&#34;</span>,
+                 y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pourcentage&#34;</span>,
+                 hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tranche&#34;</span>, data<span style="color:#f92672">=</span>france)
 plt<span style="color:#f92672">.</span>show()
 </code></pre></div><p><img src="/img/tidydata/population-age-75_59_67.png" alt="Age de la population 2018"></p>
 <h2 id="so-what-">So what ?</h2>
@@ -286,16 +286,16 @@ plt<span style="color:#f92672">.</span>show()
     <!-- Scripts -->
         <!-- Scripts -->
     <!-- jQuery -->
-    <script src="https://khalidck.github.io/js/jquery.min.js"></script>
-    <script src="https://khalidck.github.io/js/jquery.scrolly.min.js"></script>
-    <script src="https://khalidck.github.io/js/jquery.scrollex.min.js"></script>
-    <script src="https://khalidck.github.io/js/skel.min.js"></script>
-    <script src="https://khalidck.github.io/js/util.js"></script>
+    <script src="https://khalidck.fr/js/jquery.min.js"></script>
+    <script src="https://khalidck.fr/js/jquery.scrolly.min.js"></script>
+    <script src="https://khalidck.fr/js/jquery.scrollex.min.js"></script>
+    <script src="https://khalidck.fr/js/skel.min.js"></script>
+    <script src="https://khalidck.fr/js/util.js"></script>
 
     
 
     <!-- Main JS -->
-    <script src="https://khalidck.github.io/js/main.js"></script>
+    <script src="https://khalidck.fr/js/main.js"></script>
 
     
 <script type="application/javascript">

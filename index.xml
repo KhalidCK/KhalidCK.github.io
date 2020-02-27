@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>KhalidCK</title>
-    <link>https://khalidck.github.io/</link>
+    <link>https://khalidck.fr/</link>
     <description>Recent content on KhalidCK</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <lastBuildDate>Sun, 26 Jan 2020 17:03:36 +0100</lastBuildDate>
     
-	<atom:link href="https://khalidck.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://khalidck.fr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Données en ordre</title>
-      <link>https://khalidck.github.io/posts/tidydata/</link>
+      <link>https://khalidck.fr/posts/tidydata/</link>
       <pubDate>Sun, 26 Jan 2020 17:03:36 +0100</pubDate>
       
-      <guid>https://khalidck.github.io/posts/tidydata/</guid>
+      <guid>https://khalidck.fr/posts/tidydata/</guid>
       <description>Notebook interactif: 
 Que partagent un bon cuisinier et un bon &amp;ldquo;data analyst&amp;rdquo; ? La préparation avant la recette.
 Pour un chef, la clarté vient de l&amp;rsquo;organisation de son espace. Les quelques ustensiles nécessaires sont à portée de main et les ingrédients sont positionnés stratégiquement.
@@ -25,10 +25,10 @@ C&amp;rsquo;est un concept que l&amp;rsquo;on retrouve en analyse de donnée sou
     
     <item>
       <title>Quand prendre le métro à Paris ?</title>
-      <link>https://khalidck.github.io/posts/metro/</link>
+      <link>https://khalidck.fr/posts/metro/</link>
       <pubDate>Tue, 10 Apr 2018 20:44:00 +0200</pubDate>
       
-      <guid>https://khalidck.github.io/posts/metro/</guid>
+      <guid>https://khalidck.fr/posts/metro/</guid>
       <description>À Paris, le métro est une nécessité pour la majorité de ses habitants. Il est composé de 14 lignes principales qui s&#39;étendent sur près de 220 km. En moyenne, entre deux stations il y a 500m. Il a beaucoup d&amp;rsquo;avantages, mais un inconvénient de taille : il est extrêmement fréquenté.
 Si l&amp;rsquo;on souhaite éviter la foule, il est communément admis d&#39;éviter les horaires suivants :
  Le matin entre 8 et 9h Le soir entre 17 et 19h  Existe-t-il des données pour confirmer ce constat empirique ?</description>

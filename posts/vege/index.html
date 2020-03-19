@@ -1,5 +1,6 @@
+<!DOCTYPE HTML>
 <html>
-<!-- Header -->
+
     <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
 	<meta name="description" content="blog personnel data engineer">
 	<meta name="author" content="Khalid CK">
 	<meta name="generator" content="Hugo 0.67.1" />
-	<title>Posts &middot; KhalidCK</title>
+	<title>Le bio du coin &middot; KhalidCK</title>
 	<!-- Stylesheets -->
 	
 	<link rel="stylesheet" href="https://khalidck.fr/css/main.css"/>
@@ -31,13 +32,12 @@
 	<script src="js/ie/html5shiv.jsrespond.min.js"></script>
 	<![endif]-->
 </head>
-
     <body>
 
     <!-- Wrapper -->
         <div id="wrapper">
 
-        <!-- Header -->
+            <!-- Header -->
     <header id="header" class="alt">
         <a href="https://khalidck.fr" class="logo"><strong>Khalid CK</strong> <span>Data Analyst, long-life learner</span></a>
         <nav>
@@ -64,79 +64,79 @@
     </nav>
 
         <!-- Main -->
-            <div id="main">
+            <div id="main" class="alt">
 
-                <section id="banner" class="style2">
-                    <div class="inner">
-			
-                        <header class="major">
-                            <h1>Posts</h1>
-                        </header>
-                        <div class="content">
+                
+                    <section id="one">
+                        <div class="inner">
+                            <header class="major">
+                                <h1>Le bio du coin</h1>
+                            </header>
                             
-                        </div>
-                    </div>
-                </section>
+                            <p>Consommateur régulier de fruits et légumes bio, j’ai cependant peu de
+boutiques à proximité (une seul à moins de 15 min).</p>
+<p>Comment savoir si les prix sont raisonnables ?</p>
+<p>Après quelques recherches le <a href="https://rnm.franceagrimer.fr/accueil">RNM</a>
+propose un jeu de données mis à jour régulièrement (merci à la
+<a href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000033202746&amp;dateTexte=&amp;categorieLien=id">République numérique</a>).</p>
+<p>Pour répondre à cette question, j’ai besoin des éléments suivants :</p>
+<ol>
+<li>
+<p>Récupérer périodiquement les données sur le site du RNM</p>
+</li>
+<li>
+<p>Transformer les données pour obtenir la réponse à ma question</p>
+</li>
+<li>
+<p>Visualiser le résultat</p>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<h2 id="les-outils-serverless-daws-se-prêtent-bien-à-ce-genre-darchitecture">Les outils serverless d’AWS se prêtent bien à ce genre d’architecture.</h2>
+<ol>
+<li>
+<p>Récupérer périodiquement les données sur le site du RNM</p>
+<p><img src="/img/vegeprice/image5.png" alt="retrieve data"></p>
+</li>
+<li>
+<p>Transformer les données pour obtenir la réponse à ma question</p>
+<p><img src="/img/vegeprice/image3.png" alt="process data"></p>
+</li>
+<li>
+<p>Visualiser le résultat</p>
+<p><img src="/img/vegeprice/image1.png" alt="frontend"></p>
+</li>
+</ol>
+<h3 id="vocabulaire">Vocabulaire</h3>
+<p><img src="/img/vegeprice/image6.png" alt="lambda"> Un morceau de code. C’est une <strong>lambda</strong> dans le vocabulaire AWS, elle va s&rsquo;exécuter au moment opportun.</p>
+<p><img src="/img/vegeprice/image4.png" alt="s3"> <strong>AWS S3</strong>, pour le stockage. Il a l&rsquo;avantage d’être simple et peu cher (de
+l&rsquo;ordre de 2 centimes les 10 GB par mois)</p>
+<p><img src="/img/vegeprice/image2.png" alt="vuejs"> L’application <a href="https://vuejs.org/">VueJS</a> qui s&rsquo;exécute sur le navigateur (Firefox,
+chrome …)</p>
+<p>Le resultat: <strong><a href="https://vegeprice.fr">VegePrice.fr</a></strong></p>
+<p><a href="https://vegeprice.fr"><img src="/img/vegeprice/peek-vegeprice.apng" alt="peek vegeprice"></a></p>
+<h2 id="les-offres-cloud-serverless-permettent-de-passer-rapidement-de-lidée-à-la-mise-en-oeuvre">Les offres cloud serverless permettent de passer rapidement de l’idée à la mise en oeuvre.</h2>
+<p>Cependant, il n’y a pas de solution magique</p>
+<blockquote>
+<p><a href="https://en.wikipedia.org/wiki/There_ain%27t_no_such_thing_as_a_free_lunch">There ain&rsquo;t no such thing as a free
+lunch</a>)</p>
+</blockquote>
+<p>Cette approche demande de nouvelles expertises, moins de
+contrôle direct, un pricing plus compliqué…</p>
+<p>Pour se forger une opinion,
+AWS met à disposition plusieurs ressources accessible,visible sur les
+<a href="https://aws.amazon.com/fr/free/?audit=2019q1&amp;all-free-tier.sort-by=item.additionalFields.SortRank&amp;all-free-tier.sort-order=asc&amp;awsf.Free%20Tier%20Types=tier%23always-free">&ldquo;Offre gratuite
+d&rsquo;AWS&rdquo;</a></p>
 
-                <section id="two" class="spotlights">
-                    
-                    <section>
-                        <a href="/posts/tidydata/" class="image">
-							<img src="/img/posts/" alt="" data-position="center center" />
-						</a>
-                        <div class="content">
-                            <div class="inner">
-                                <header class="major">
-                                    <h3>Données en ordre</h3>
-                                </header>
-                                <p></p>
-                                <ul class="actions">
-                                    <li><a href="/posts/tidydata/" class="button">Learn more</a></li>
-                                </ul>
-                            </div>
                         </div>
                     </section>
-                    
-                    <section>
-                        <a href="/posts/vege/" class="image">
-							<img src="/img/posts/" alt="" data-position="center center" />
-						</a>
-                        <div class="content">
-                            <div class="inner">
-                                <header class="major">
-                                    <h3>Le bio du coin</h3>
-                                </header>
-                                <p></p>
-                                <ul class="actions">
-                                    <li><a href="/posts/vege/" class="button">Learn more</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <section>
-                        <a href="/posts/metro/" class="image">
-							<img src="/img/posts/" alt="" data-position="center center" />
-						</a>
-                        <div class="content">
-                            <div class="inner">
-                                <header class="major">
-                                    <h3>Quand prendre le métro à Paris ?</h3>
-                                </header>
-                                <p></p>
-                                <ul class="actions">
-                                    <li><a href="/posts/metro/" class="button">Learn more</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    
-                </section>
+            <!-- Disqus Inject -->
+                
             </div>
             
         <!-- Footer -->
-			
-				<!-- Footer -->
+            
+                <!-- Footer -->
     <footer id="footer">
         <div class="inner">
             <ul class="icons">
@@ -156,7 +156,6 @@
     </footer>
 
             
-        
         </div>
 
     <!-- Scripts -->
@@ -187,6 +186,6 @@ if (!doNotTrack) {
 
 
     
-        
+
     </body>
 </html>

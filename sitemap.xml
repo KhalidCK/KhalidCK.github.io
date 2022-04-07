@@ -1,38 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://khalidck.fr/posts/tidydata/</loc>
+    <loc>https://khalidck.github.io/posts/tidydata/</loc>
     <lastmod>2020-01-26T17:03:36+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://khalidck.fr/</loc>
+  </url><url>
+    <loc>https://khalidck.github.io/</loc>
     <lastmod>2020-01-26T17:03:36+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://khalidck.fr/posts/vege/</loc>
+  </url><url>
+    <loc>https://khalidck.github.io/posts/vege/</loc>
     <lastmod>2020-01-26T17:03:36+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://khalidck.fr/posts/</loc>
+  </url><url>
+    <loc>https://khalidck.github.io/posts/</loc>
     <lastmod>2020-01-26T17:03:36+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://khalidck.fr/posts/metro/</loc>
+  </url><url>
+    <loc>https://khalidck.github.io/posts/metro/</loc>
     <lastmod>2018-04-10T20:44:00+02:00</lastmod>
+  </url><url>
+    <loc>https://khalidck.github.io/categories/</loc>
+  </url><url>
+    <loc>https://khalidck.github.io/tags/</loc>
   </url>
-  
-  <url>
-    <loc>https://khalidck.fr/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://khalidck.fr/tags/</loc>
-  </url>
-  
 </urlset>
